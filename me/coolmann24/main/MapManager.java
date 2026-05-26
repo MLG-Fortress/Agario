@@ -883,7 +883,7 @@ public class MapManager {
    public void displayMassToPlayers() {
       for (Map map : this.maps) {
          if (map.usingLeaderboard()) {
-            for (String entry : new ArrayList(map.getScoreboardObjective().getScoreboard().getEntries())) {
+             for (String entry : new ArrayList<String>(map.getScoreboardObjective().getScoreboard().getEntries())) {
                map.getScoreboardObjective().getScoreboard().resetScores(entry);
             }
 
