@@ -21,7 +21,7 @@ public class AgarPlayer {
       this.cells = new ArrayList<>();
       this.materials = new ArrayList<>();
       this.materialdata = data;
-      this.materials.add(Material.WOOL);
+      this.materials.add(WoolColors.materialFor(data));
       this.team = team;
       this.splitbuffered = true;
       this.cooldown = false;

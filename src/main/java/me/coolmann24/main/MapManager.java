@@ -100,12 +100,6 @@ public class MapManager {
                         && b.getType() != Material.AIR) {
                         b.setType(player.getMaterials().get(Main.random.nextInt(player.getMaterials().size())));
 
-                        try {
-                           b.setData((byte)player.getWoolColor());
-                        } catch (Exception e) {
-                           e.printStackTrace();
-                        }
-
                         map.addBlockUsed(b);
                      }
                   }
@@ -388,7 +382,7 @@ public class MapManager {
             p.getInventory().clear();
 
             for (int i = 0; i <= 8; i++) {
-               p.getInventory().setItem(i, new ItemStack(newplayer.getMaterials().get(0), 1, (short)newplayer.getWoolColor()));
+               p.getInventory().setItem(i, new ItemStack(newplayer.getMaterials().get(0)));
             }
 
             return true;
@@ -556,7 +550,7 @@ public class MapManager {
                      } else {
                         playercell.setSize(nonplayercell.getSize() + playercell.getSize());
                         player.removeCell(nonplayercell, map.getSpectatorSpawn());
-                        player.getPlayer().playSound(playercell.getCellLocation(), Sound.BLOCK_NOTE_HAT, 1.0F, 1.0F);
+                        player.getPlayer().playSound(playercell.getCellLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 1.0F, 1.0F);
                      }
                      break;
                   }

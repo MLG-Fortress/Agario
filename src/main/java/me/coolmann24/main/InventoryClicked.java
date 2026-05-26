@@ -26,7 +26,7 @@ public class InventoryClicked implements Listener {
          if (event.getClickedInventory() != null) {
             ItemStack i = event.getCurrentItem();
             if (i != null) {
-               if (event.getClickedInventory().getName().equals("Agario Games")) {
+               if (event.getView().getTitle().equals("Agario Games")) {
                   event.setCancelled(true);
                   if (i.getType().equals(Material.SLIME_BLOCK)) {
                      String s = i.getItemMeta().getDisplayName().substring(6);

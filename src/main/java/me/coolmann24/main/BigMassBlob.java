@@ -15,7 +15,7 @@ public class BigMassBlob {
       this.a = (ArmorStand)world.spawn(p.getEyeLocation(), ArmorStand.class);
       this.a.setVisible(false);
       this.a.setGravity(false);
-      this.a.setItemInHand(new ItemStack(Material.WOOL, 1, (short)woolcolor));
+      this.a.setItemInHand(new ItemStack(WoolColors.materialFor(woolcolor)));
       this.velocity = new Vector(p.getLocation().getDirection().getX() * 3.0, 0.5, p.getLocation().getDirection().getZ() * 3.0);
    }
 

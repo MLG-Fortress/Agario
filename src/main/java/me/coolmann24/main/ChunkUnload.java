@@ -8,7 +8,7 @@ public class ChunkUnload implements Listener {
    @EventHandler
    public void onChunkUnload(ChunkUnloadEvent event) {
       if (Main.mapmanager.chunkInUse(event.getChunk())) {
-         event.setCancelled(true);
+         event.getChunk().setForceLoaded(true);
       }
    }
 }

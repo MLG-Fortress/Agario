@@ -10,7 +10,7 @@ public class SmallMassBlob {
    public SmallMassBlob(World world, Location location, boolean redvirus, int woolcolor) {
       ArmorStand blob = (ArmorStand)world.spawn(location, ArmorStand.class);
       blob.setVisible(false);
-      blob.setItemInHand(new ItemStack(Material.WOOL, 1, (short)woolcolor));
+      blob.setItemInHand(new ItemStack(WoolColors.materialFor(woolcolor)));
       blob.setSmall(true);
       blob.setGravity(false);
       blob.setVisible(false);
