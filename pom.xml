@@ -22,11 +22,10 @@
     </repositories>
 
     <build>
-        <sourceDirectory>${project.basedir}</sourceDirectory>
         <finalName>${project.name}</finalName>
         <resources>
             <resource>
-                <directory>${project.basedir}</directory>
+                <directory>${project.basedir}/src/main/resources</directory>
                 <filtering>true</filtering>
                 <includes>
                     <include>plugin.yml</include>
