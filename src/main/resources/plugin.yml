@@ -3,7 +3,7 @@ version: Beta 1.3
 main: me.coolmann24.main.Main
 author: coolmann24
 description: Play Agario in Minecraft!
-
+api-version: '26.1.2'
 commands:
   agario:
     usage: /<command>
