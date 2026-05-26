@@ -2,7 +2,6 @@ package me.coolmann24.main;
 
 import java.util.ArrayList;
 import org.bukkit.Bukkit;
-import org.bukkit.Chunk;
 import org.bukkit.GameMode;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -21,7 +20,6 @@ public class Map {
    private ArrayList<String> teams;
    private ArrayList<Integer> materialdatalist;
    private ArrayList<String> commandscantrunwhenplaying;
-   private ArrayList<Chunk> chunks;
    private int[] mapbounds;
    private int smallblobcount;
    private int mapylevel;
@@ -120,7 +118,6 @@ public class Map {
       this.greenviruses = new ArrayList<>();
       this.redviruses = new ArrayList<>();
       this.cellblocks = new ArrayList<>();
-      this.chunks = new ArrayList<>();
       this.movingthrownmass = new ArrayList<>();
       this.materialdatalist = materialdata;
       this.teams = teams;
@@ -131,14 +128,6 @@ public class Map {
          this.objective.setDisplaySlot(DisplaySlot.SIDEBAR);
       }
 
-      for (int i = mapbounds[0]; i <= mapbounds[1]; i++) {
-         for (int j = mapbounds[2]; j <= mapbounds[3]; j++) {
-            Block b = world.getBlockAt(i, ylevel, j);
-            if (!this.chunks.contains(b.getChunk())) {
-               this.chunks.add(b.getChunk());
-            }
-         }
-      }
    }
 
    public int getXMinBounds() {
@@ -331,10 +320,6 @@ public class Map {
       }
 
       return false;
-   }
-
-   public ArrayList<Chunk> getChunks() {
-      return this.chunks;
    }
 
    public Objective getScoreboardObjective() {

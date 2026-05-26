@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.Chunk;
 import org.bukkit.GameMode;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -832,16 +831,6 @@ public class MapManager {
             }
          }
       }
-   }
-
-   public boolean chunkInUse(Chunk c) {
-      for (Map map : this.maps) {
-         if (map.getChunks().contains(c)) {
-            return true;
-         }
-      }
-
-      return false;
    }
 
    public void killCellsOutOfMap() {

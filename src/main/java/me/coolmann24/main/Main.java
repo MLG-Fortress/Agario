@@ -26,7 +26,6 @@ public class Main extends JavaPlugin {
       Bukkit.getPluginManager().registerEvents(new ThrowMass(), this);
       Bukkit.getPluginManager().registerEvents(new PlayerExecuteCommandEvent(), this);
       Bukkit.getPluginManager().registerEvents(new PlayerQuit(), this);
-      Bukkit.getPluginManager().registerEvents(new ChunkUnload(), this);
       Bukkit.getPluginManager().registerEvents(new PlayerDropItem(), this);
       Bukkit.getPluginManager().registerEvents(new PlayerRightClickVillager(), this);
       Bukkit.getPluginManager().registerEvents(new PlayerClickGuiOpener(this), this);
